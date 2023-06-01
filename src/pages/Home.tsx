@@ -1,10 +1,8 @@
-import Background from '../assets/wood.jpg'
-
 function Home() {
 
   return (
   <div style={{
-    backgroundImage: `url(${ Background})`, 
+    backgroundImage: `url(./wood.jpg)`, 
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed',
     height: '83vh',

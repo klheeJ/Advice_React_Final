@@ -1,11 +1,10 @@
-import Background from '../assets/cactus.png'
 import { Link } from 'react-router-dom'
 
 function About() {
   return (
     <>
     <div style={{
-      backgroundImage: `url(${ Background})`, 
+      backgroundImage: `url(./Cactus.png)`, 
       backgroundSize: 'cover',
       backgroundAttachment: 'fixed',
       height: '75vh',
