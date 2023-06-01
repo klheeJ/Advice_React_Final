@@ -1,16 +1,13 @@
-import { useGridRowsPreProcessors } from '@mui/x-data-grid/internals';
+import AdviceInventoryForm from "./AdviceInventoryForm";
 
 type Props = {
-    id?: string[],
+    id?: string,
+    user_ID: string,
     open: boolean;
     onClose: () => void;
 }
 
 const Modal = ( props: Props ) => {
-    require('react-dom');
-window.React2 = require('react');
-console.log(window.React1 === window.React2);
-
     if ( !props.open ) return null;
   return (
     <div
@@ -31,7 +28,7 @@ console.log(window.React1 === window.React2);
                             </p>
                         </div>
                         <div className="flex flex-col item-center text-center mt-3 p-2">
-                            <ContactForm id={ props.id } />
+                            <AdviceInventoryForm id={ props.id } user_ID={props.user_ID} />
                         </div>
                     </div>
 

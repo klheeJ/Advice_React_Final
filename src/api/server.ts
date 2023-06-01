@@ -16,15 +16,20 @@ export const server_calls={
     },
 
     create:(advice:string, user_ID:string)=>{ 
-        axios.post('https://fantasy-whimsical-stingray.glitch.me/api/advice',{advice:advice, user_ID:user_ID}).then()
+        axios.post('https://fantasy-whimsical-stingray.glitch.me/api/advice',{advice:advice, user_ID:user_ID})
     },
 
 
     deleteAdvice:(id:string) => {
         axios.delete(`https://fantasy-whimsical-stingray.glitch.me/api/advice/${id}`)
         console.log(id)
-   }
+   },
 
+   updateAdvice:(advice:string, id:string, user_ID:string, onSuccess:((advice:Advice[])=>void)) => {
+        axios.put(`https://fantasy-whimsical-stingray.glitch.me/api/advice/${id}`, {advice:advice, id:id, user_ID:user_ID}).then((res) =>{
+            onSuccess(res.data)
+        });
+    }
 }
 
 export default server_calls
